@@ -14,7 +14,7 @@ export function TheGroup() {
       color: "hover:border-yellow-500/50 hover:bg-yellow-500/5",
       cols: "md:col-span-2",
       link: "#loja",
-      image: "/Distribuidora - Fachada",
+      image: "/fachada.jpg",
     },
     {
       id: "distribuidora",
