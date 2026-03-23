@@ -25,7 +25,7 @@ export function TheGroup() {
       color: "hover:border-red-500/50 hover:bg-red-500/5",
       cols: "md:col-span-1",
       link: "#atacado",
-      image: "/fachada.jpg",
+      image: "/Distribuidora - Fachada.JPG",
     },
     {
       id: "plasticos",
