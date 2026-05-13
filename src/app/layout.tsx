@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
+import "./globals.css"
+import Script from "next/script";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -52,10 +53,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
-      <body className={`${poppins.variable} font-(--font-poppins)`}>
-        {children}
-      </body>
-    </html>
-  );
-}
+   <html lang="pt-BR" className="scroll-smooth">
+  <head>
+    <Script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NTVZ8XC590"
+    />
+
+    <Script id="google-analytics">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NTVZ8XC590');
+      `}
+    </Script>
+  </head>
+
+  <body className={`${poppins.variable} font-(--font-poppins)`}>
+    {children}
+  </body>
+</html>
