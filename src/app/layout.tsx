@@ -10,9 +10,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Rio Pardo Embalagens | Soluções Completas",
+  title: "Rio Pardo Embalagens | Embalagens, Confeitaria e Descartáveis",
   description:
-    "Artigos de festa, confeitaria, embalagens e descartáveis. Varejo e Atacado em São José do Rio Pardo.",
+    "A maior variedade em artigos de festa, confeitaria, embalagens e descartáveis em São José do Rio Pardo.",
 };
 
 export default function RootLayout({
