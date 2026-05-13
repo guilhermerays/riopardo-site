@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   description:
     "A maior variedade em artigos de festa, confeitaria, embalagens e descartáveis em São José do Rio Pardo.",
 
+verification: {
+  google: "DDLEgZC524VMuHUR4eLe5fo0PNL0JHwDcKfX0FrWp58",
+},
+  
   openGraph: {
     title: "Rio Pardo Embalagens",
 
