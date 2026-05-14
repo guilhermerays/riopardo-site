@@ -12,8 +12,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <Hero />
-        <Hero />
+      <Hero />
 
 <section className="bg-black text-white py-14 text-center">
   <h1 className="text-5xl font-black uppercase">
@@ -43,7 +42,7 @@ export default function Home() {
   </div>
 </section>
 
-<TheGroup />
+
         <TheGroup />
         <Features />
         <TheProducts />
