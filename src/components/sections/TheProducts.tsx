@@ -119,21 +119,21 @@ export function TheProducts() {
 
     <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
 
-    <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
-      <span className="text-yellow-400 uppercase text-sm font-black tracking-[0.2em] mb-3">
-        Destaque da Temporada
-      </span>
-
-      <h3 className="text-4xl lg:text-6xl font-black text-white leading-none mb-4 uppercase">
-        {featuredBanner.title}
-      </h3>
-
-      <p className="text-zinc-300 text-sm lg:text-lg max-w-xl leading-relaxed">
-        {featuredBanner.description}
-      </p>
-    </div>
+    
   </a>
+<div className="bg-zinc-900 border border-t-0 border-white/10 rounded-b-2xl p-6 -mt-1">
+  <span className="text-yellow-400 uppercase text-xs font-black tracking-[0.2em]">
+    Destaque da Temporada
+  </span>
 
+  <h3 className="text-3xl lg:text-5xl font-black text-white leading-none mt-3 uppercase">
+    {featuredBanner.title}
+  </h3>
+
+  <p className="text-zinc-400 text-sm lg:text-base mt-4 leading-relaxed">
+    {featuredBanner.description}
+  </p>
+</div>
   {/* GRID DOS CARDS */}
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
     {products.map((product) => {
