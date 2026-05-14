@@ -49,10 +49,7 @@ const categories = [
 export function TheProducts() {
   const [activeFilter, setActiveFilter] = useState("todos");
 
-  const filteredProducts =
-    activeFilter === "todos"
-      ? products
-      : products.filter((p) => p.category === activeFilter);
+  const filteredProducts = products;
 
   const phoneNumber = "5519989926166";
 
