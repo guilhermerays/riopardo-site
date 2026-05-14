@@ -22,7 +22,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-[45vh] md:h-[60vh] overflow-hidden">
+   <section className="relative w-full h-[70vh] overflow-hidden">
       <Image
         src={banners[currentBanner]}
         alt="Banner Rio Pardo Embalagens"
@@ -32,25 +32,6 @@ export function Hero() {
       />
 
       <div className="absolute inset-0 bg-black/40" />
-
-     <div className="hidden">
-  <div className="flex flex-row gap-4 bg-black/80 backdrop-blur-xl p-4 rounded-2xl border border-white/10 shadow-2xl">
-    <Link
-      href="https://wa.me/5519998926166"
-      target="_blank"
-      className="bg-red-600 hover:bg-red-700 transition-all px-8 py-4 rounded-xl text-white font-bold uppercase shadow-2xl"
-    >
-      Fazer orçamento
-    </Link>
-
-    <Link
-      href="#produtos"
-      className="bg-black/30 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all px-8 py-4 rounded-xl text-white font-bold uppercase"
-    >
-      Ver produtos
-    </Link>
-  </div>
-</div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
         {banners.map((_, index) => (
