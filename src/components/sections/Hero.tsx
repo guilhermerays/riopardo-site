@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const banners = [
+  "/banner-caribe.png",
   "/banner-festa.png",
   "/banner-confeitaria.png",
   "/banner-embalagens.png",
-  "/banner-caribe.png",
 ];
 
 export function Hero() {
