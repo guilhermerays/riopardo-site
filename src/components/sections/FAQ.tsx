@@ -31,7 +31,7 @@ export default function FAQ() {
 
   return (
     <section
-      className="relative py-24 bg-zinc-950 text-zinc-100 overflow-hidden"
+      className="relative py-32 bg-zinc-950 text-zinc-100 overflow-hidden"
       id="faq"
     >
       {/* GLOW FUNDO */}
