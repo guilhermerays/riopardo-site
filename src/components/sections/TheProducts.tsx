@@ -5,61 +5,37 @@ import Image from "next/image";
 import { FaWhatsapp, FaArrowRight, FaStar } from "react-icons/fa";
 
 
+const featuredBanner = {
+  title: "Arraiá de Ofertas",
+  description:
+    "Tudo para sua festa junina: doces típicos, decorações, fantasias e muito mais.",
+  image: "/banner-festa-junina.png",
+};
+
 const products = [
   {
     id: 1,
-    name: "Bobina Fundo Estrela",
-    category: "industrial",
+    name: "Bobina Picotada",
     categoryLabel: "Industrial",
-    description: "Alta resistência para cargas pesadas. Material 100% virgem.",
-    image: "/fachada.jpg",
-    isNew: true,
+    image: "/card-bobina.png",
   },
   {
     id: 2,
-    name: "Kit Confeiteiro Pro",
-    category: "confeitaria",
-    categoryLabel: "Confeitaria",
-    description:
-      "Bicos, sacos e espátulas profissionais para acabamento perfeito.",
-    image: "/fachada.jpg",
-    isNew: false,
+    name: "Sacos de Lixo",
+    categoryLabel: "Limpeza",
+    image: "/card-sacos-lixo.png",
   },
   {
     id: 3,
-    name: "Saco de Lixo 100L",
-    category: "industrial",
-    categoryLabel: "Limpeza",
-    description: "Reforçado, micra grossa. Ideal para condomínios e empresas.",
-    image: "/fachada.jpg",
-    isNew: false,
+    name: "Chocolates para Confeitaria",
+    categoryLabel: "Confeitaria",
+    image: "/card-chocolates.png",
   },
   {
     id: 4,
-    name: "Decoração Patrulha Canina",
-    category: "festas",
-    categoryLabel: "Festas",
-    description: "Kit completo de mesa: Pratos, copos e decoração temática.",
-    image: "/fachada.jpg",
-    isNew: true,
-  },
-  {
-    id: 5,
-    name: "Embalagem Delivery Kraft",
-    category: "food",
-    categoryLabel: "Food Service",
-    description: "Sustentável e resistente a gordura. Vários tamanhos.",
-    image: "/fachada.jpg",
-    isNew: false,
-  },
-  {
-    id: 6,
-    name: "Forma de Acetato Premium",
-    category: "confeitaria",
-    categoryLabel: "Confeitaria",
-    description: "Ideal para bombons e trufas. Fácil desenforme.",
-    image: "/fachada.jpg",
-    isNew: false,
+    name: "Produtos de Limpeza",
+    categoryLabel: "Limpeza",
+    image: "/card-limpeza.png",
   },
 ];
 
@@ -128,65 +104,79 @@ export function TheProducts() {
         </div>
 
         {}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProducts.map((product) => {
-            const message = `Olá! Vi o destaque *${product.name}* no site e gostaria de saber se tem em estoque.`;
-            const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-              message
-            )}`;
+       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+  
+  {/* BANNER GIGANTE */}
+  <a
+    href={`https://wa.me/${phoneNumber}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group relative overflow-hidden rounded-2xl border border-white/10 min-h-[420px] lg:min-h-[520px]"
+  >
+    <Image
+      src={featuredBanner.image}
+      alt={featuredBanner.title}
+      fill
+      className="object-cover transition-transform duration-700 group-hover:scale-105"
+    />
 
-            return (
-              <a
-                key={product.id}
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col bg-zinc-900 border border-white/5 rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-yellow-500/30"
-              >
-                {}
-                <div className="relative h-60 overflow-hidden bg-zinc-950">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-                  />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
 
-                  {}
-                  {product.isNew && (
-                    <div className="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-black uppercase px-2 py-1 rounded-sm shadow-md flex items-center gap-1 z-10">
-                      <FaStar className="w-3 h-3" /> Novo
-                    </div>
-                  )}
+    <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
+      <span className="text-yellow-400 uppercase text-sm font-black tracking-[0.2em] mb-3">
+        Destaque da Temporada
+      </span>
 
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
-                </div>
+      <h3 className="text-4xl lg:text-6xl font-black text-white leading-none mb-4 uppercase">
+        {featuredBanner.title}
+      </h3>
 
-                {}
-                <div className="flex flex-col flex-1 p-5 relative">
-                  <div className="absolute top-0 left-0 w-full h-[1px] bg-white/5 group-hover:bg-yellow-500/50 transition-colors" />
+      <p className="text-zinc-300 text-sm lg:text-lg max-w-xl leading-relaxed">
+        {featuredBanner.description}
+      </p>
+    </div>
+  </a>
 
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
-                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest group-hover:text-zinc-300">
-                      {product.categoryLabel}
-                    </span>
-                  </div>
+  {/* GRID DOS CARDS */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {products.map((product) => {
+      const message = `Olá! Vi o destaque *${product.name}* no site e gostaria de saber se tem em estoque.`;
 
-                  <h3 className="text-lg font-bold text-white mb-2 leading-tight group-hover:text-yellow-500 transition-colors">
-                    {product.name}
-                  </h3>
+      const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+        message
+      )}`;
 
-                  <p className="text-zinc-400 text-xs leading-relaxed mb-6 line-clamp-2">
-                    {product.description}
-                  </p>
+      return (
+        <a
+          key={product.id}
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative overflow-hidden rounded-2xl border border-white/10 min-h-[250px]"
+        >
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
 
-                  <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between">
-                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider group-hover:text-white transition-colors">
-                      Consultar Disponibilidade
-                    </span>
-                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
-                      <FaWhatsapp className="w-4 h-4" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+          <div className="absolute bottom-0 left-0 p-6">
+            <span className="text-yellow-400 text-xs uppercase font-bold tracking-widest">
+              {product.categoryLabel}
+            </span>
+
+            <h3 className="text-white text-2xl font-black leading-tight mt-2">
+              {product.name}
+            </h3>
+          </div>
+        </a>
+      );
+    })}
+  </div>
+</div>
                     </div>
                   </div>
                 </div>
