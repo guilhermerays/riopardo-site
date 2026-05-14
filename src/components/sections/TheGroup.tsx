@@ -51,7 +51,7 @@ export function TheGroup() {
   return (
     <section
       id="grupo"
-      className="relative py-28 overflow-hidden bg-gradient-to-b from-zinc-950 to-zinc-900"
+      className="relative py-32 overflow-hidden bg-gradient-to-b from-zinc-950 to-zinc-900"
     >
       {/* GLOW FUNDO */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_60%)] pointer-events-none" />
