@@ -8,6 +8,7 @@ const banners = [
   "/banner-festa.png",
   "/banner-confeitaria.png",
   "/banner-embalagens.png",
+  "/banner-caribe.png",
 ];
 
 export function Hero() {
