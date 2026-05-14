@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const banners = [
-  "/banner-caribe.png",
+  "/banner-bueno.png",
   "/banner-festa.png",
   "/banner-confeitaria.png",
   "/banner-embalagens.png",
