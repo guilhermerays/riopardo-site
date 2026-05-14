@@ -35,13 +35,12 @@ export default function FAQ() {
       id="faq"
     >
       {/* GLOW FUNDO */}
-      
       <div className="absolute bottom-0 right-0 w-[500px] h-[300px] bg-yellow-500/5 blur-[120px] rounded-full pointer-events-none" />
-      
+
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_60%)] pointer-events-none" />
 
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
-        
+
         {/* TOPO */}
         <div className="text-center mb-14">
           <span className="text-yellow-500 font-bold tracking-[0.25em] text-xs uppercase">
@@ -70,9 +69,10 @@ export default function FAQ() {
                 overflow-hidden
                 bg-zinc-900/50
                 backdrop-blur-sm
-                transition-all duration-300
+                transition-all duration-700 ease-out
                 hover:border-yellow-500/30
                 hover:bg-zinc-900/70
+                hover:scale-[1.01]
                 ${
                   openIndex === index
                     ? 'border-yellow-500/30 bg-zinc-900/80'
@@ -81,13 +81,13 @@ export default function FAQ() {
               `}
             >
               <button
-                className="w-full px-6 md:px-8 py-6 flex items-center justify-between text-left focus:outline-none"
+                className="w-full px-6 md:px-8 py-6 flex items-center justify-between text-left focus:outline-none transition-all duration-700 ease-out"
                 onClick={() =>
                   setOpenIndex(openIndex === index ? null : index)
                 }
                 aria-expanded={openIndex === index}
               >
-                <span className="font-bold text-lg md:text-xl text-white pr-6 leading-snug">
+                <span className="font-bold text-lg md:text-xl text-white pr-6 leading-snug transition-all duration-700 ease-out">
                   {faq.question}
                 </span>
 
@@ -99,10 +99,10 @@ export default function FAQ() {
                     flex
                     items-center
                     justify-center
-                    transition-all duration-300
+                    transition-all duration-700 ease-out
                     ${
                       openIndex === index
-                        ? 'bg-yellow-500 text-black'
+                        ? 'bg-yellow-500 text-black shadow-[0_0_20px_rgba(234,179,8,0.25)]'
                         : 'bg-white/5 text-zinc-400 group-hover:bg-white/10 group-hover:text-white'
                     }
                   `}
@@ -118,7 +118,7 @@ export default function FAQ() {
               <div
                 className={`
                   overflow-hidden
-                  transition-all duration-500 ease-in-out
+                  transition-all duration-700 ease-out
                   ${
                     openIndex === index
                       ? 'max-h-96 opacity-100'
@@ -129,7 +129,7 @@ export default function FAQ() {
                 <div className="px-6 md:px-8 pb-8">
                   <div className="w-full h-px bg-white/5 mb-6" />
 
-                  <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
+                  <p className="text-zinc-400 leading-relaxed text-sm md:text-base transition-all duration-700 ease-out">
                     {faq.answer}
                   </p>
                 </div>
