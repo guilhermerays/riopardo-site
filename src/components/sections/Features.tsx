@@ -30,7 +30,7 @@ export function Features() {
   ];
 
   return (
-    <section className="relative py-28 bg-zinc-950 border-t border-b border-white/5 overflow-hidden">
+    <section className="relative py-32 bg-zinc-950 border-t border-b border-white/5 overflow-hidden">
       
       {/* GLOW FUNDO */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_60%)] pointer-events-none" />
