@@ -33,6 +33,7 @@ export function Features() {
     <section className="relative py-32 bg-zinc-950 border-t border-b border-white/5 overflow-hidden">
       
       {/* GLOW FUNDO */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-yellow-500/5 blur-[140px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_60%)] pointer-events-none" />
 
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-yellow-500/5 rounded-full blur-[140px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
