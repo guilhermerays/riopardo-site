@@ -31,9 +31,10 @@ export function Features() {
 
   return (
     <section className="relative py-32 bg-zinc-950 border-t border-b border-white/5 overflow-hidden">
-      
+
       {/* GLOW FUNDO */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-yellow-500/5 blur-[140px] rounded-full pointer-events-none" />
+
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_60%)] pointer-events-none" />
 
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-yellow-500/5 rounded-full blur-[140px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
@@ -43,7 +44,7 @@ export function Features() {
         {/* TOPO */}
         <div className="flex flex-col items-center justify-between mb-20 gap-8 text-center">
           <div className="max-w-3xl">
-            
+
             <span className="text-yellow-500 uppercase tracking-[0.25em] text-xs font-bold">
               Diferenciais
             </span>
@@ -81,8 +82,9 @@ export function Features() {
                 backdrop-blur-sm
                 border border-white/5
                 hover:border-yellow-500/20
-                transition-all duration-500
+                transition-all duration-700 ease-out
                 hover:-translate-y-2
+                hover:scale-[1.01]
                 hover:bg-zinc-900/70
                 hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]
                 overflow-hidden
@@ -90,10 +92,10 @@ export function Features() {
               data-aos="fade-up"
               data-aos-delay={index * 150}
             >
-              
+
               {/* GLOW CARD */}
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"
                 style={{
                   background:
                     index === 1
@@ -106,30 +108,30 @@ export function Features() {
 
               {/* ÍCONE */}
               <div className="relative mb-8">
-                <div className="relative bg-zinc-950/80 border border-white/10 p-5 rounded-2xl backdrop-blur-sm shadow-[0_0_30px_rgba(0,0,0,0.25)] group-hover:scale-110 transition-transform duration-300">
+                <div className="relative bg-zinc-950/80 border border-white/10 p-5 rounded-2xl backdrop-blur-sm shadow-[0_0_30px_rgba(0,0,0,0.25)] group-hover:scale-110 transition-transform duration-700 ease-out">
                   {feature.icon}
                 </div>
               </div>
 
               {/* TÍTULO */}
-              <h3 className="text-2xl font-black text-white uppercase italic tracking-wide mb-4 group-hover:text-yellow-400 transition-colors duration-300">
+              <h3 className="text-2xl font-black text-white uppercase italic tracking-wide mb-4 group-hover:text-yellow-400 transition-all duration-700 ease-out">
                 {feature.title}
               </h3>
 
               {/* TEXTO */}
-              <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
+              <p className="text-zinc-400 text-sm md:text-base leading-relaxed transition-all duration-700 ease-out">
                 {feature.description}
               </p>
 
               {/* LINHA */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-yellow-500 group-hover:w-1/3 transition-all duration-500 opacity-0 group-hover:opacity-100" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-yellow-500 group-hover:w-1/3 transition-all duration-700 ease-out opacity-0 group-hover:opacity-100" />
             </div>
           ))}
         </div>
 
         {/* CTA FINAL */}
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
-          
+
           <div className="text-center md:text-left">
             <span className="text-red-500 font-bold uppercase tracking-[0.25em] text-xs mb-3 block">
               Atendimento Corporativo
@@ -162,7 +164,8 @@ export function Features() {
               uppercase
               tracking-widest
               text-sm
-              transition-all duration-300
+              transition-all duration-700 ease-out
+              hover:scale-[1.02]
               rounded-2xl
               shadow-[0_0_25px_rgba(234,179,8,0.15)]
               hover:shadow-[0_0_40px_rgba(234,179,8,0.25)]
@@ -170,7 +173,7 @@ export function Features() {
           >
             Falar com Vendedor
 
-            <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+            <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-700 ease-out" />
           </a>
         </div>
       </div>
