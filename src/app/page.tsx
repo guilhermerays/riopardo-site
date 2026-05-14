@@ -2,8 +2,30 @@ import { Header } from "@/components/Header";
 import { Features } from "@/components/sections/Features";
 import { Hero } from "@/components/sections/Hero";
 import { TheGroup } from "@/components/sections/TheGroup";
-<section className="w-full bg-black py-8 flex justify-center">
-  <div className="flex flex-row gap-4">
+import { TheProducts } from "@/components/sections/TheProducts";
+import Location from "../components/sections/Location";
+import FAQ from "../components/sections/FAQ";
+import Footer from "../components/Footer";
+
+export default function Home() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Hero />
+
+<section className="bg-black text-white py-14 text-center">
+  <h1 className="text-5xl font-black uppercase">
+    Rio Pardo Embalagens
+  </h1>
+
+  <p className="text-zinc-300 mt-4 text-xl max-w-3xl mx-auto">
+    Soluções completas em embalagens, confeitaria,
+    descartáveis e artigos para festas.
+  </p>
+
+  <div className="flex justify-center gap-4 mt-8">
     <a
       href="https://wa.me/5519998926166"
       target="_blank"
@@ -20,17 +42,8 @@ import { TheGroup } from "@/components/sections/TheGroup";
     </a>
   </div>
 </section>
-import { TheProducts } from "@/components/sections/TheProducts";
-import Location from "../components/sections/Location";
-import FAQ from "../components/sections/FAQ";
-import Footer from "../components/Footer";
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
+<TheGroup />
         <TheGroup />
         <Features />
         <TheProducts />
