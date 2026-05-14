@@ -177,13 +177,6 @@ export function TheProducts() {
     })}
   </div>
 </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            );
-          })}
-        </div>
 
         {}
         <div className="mt-16 text-center border-t border-white/5 pt-8">
