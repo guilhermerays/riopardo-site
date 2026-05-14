@@ -52,7 +52,7 @@ export function Hero() {
             key={index}
             onClick={() => setCurrentBanner(index)}
             className={`
-              transition-all duration-300 rounded-full
+              transition-all duration-700 ease-out rounded-full
               ${
                 currentBanner === index
                   ? "bg-white w-10 h-3 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
