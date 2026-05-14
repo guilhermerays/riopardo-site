@@ -160,16 +160,16 @@ export function TheProducts() {
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
-          <div className="absolute bottom-0 left-0 p-6">
-            <span className="text-yellow-400 text-xs uppercase font-bold tracking-widest">
-              {product.categoryLabel}
-            </span>
-
-            <h3 className="text-white text-2xl font-black leading-tight mt-2">
-              {product.name}
-            </h3>
-          </div>
         </a>
+        <div className="bg-zinc-900 border border-t-0 border-white/10 rounded-b-2xl p-4 -mt-1">
+  <span className="text-yellow-400 text-[10px] uppercase font-bold tracking-widest">
+    {product.categoryLabel}
+  </span>
+
+  <h3 className="text-white text-xl font-black leading-tight mt-2">
+    {product.name}
+  </h3>
+</div>
       );
     })}
   </div>
