@@ -55,7 +55,7 @@ export function TheProducts() {
   return (
     <section
       id="produtos"
-      className="py-24 bg-black relative border-t border-white/5 overflow-hidden"
+      className="py-32 bg-black relative border-t border-white/5 overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-900 via-zinc-950 to-zinc-950 opacity-40 pointer-events-none" />
 
