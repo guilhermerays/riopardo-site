@@ -2,64 +2,77 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const banners = [
+  "/banner-festa.png",
+  "/banner-confeitaria.png",
+  "/banner-embalagens.png",
+];
 
 export function Hero() {
-  return (
-    <section className="relative w-full min-h-screen bg-zinc-950 overflow-hidden flex items-center justify-center">
-      <div className="absolute inset-0 w-full h-full z-11">
-        {}
-        <Image
-          src="/fachada.jpg"
-          alt="Fachada Rio Pardo"
-          fill
-          priority
-          className="object-cover object-center opacity-40"
-        />
+  const [currentBanner, setCurrentBanner] = useState(0);
 
-        {}
-        <div className="absolute bottom-0 w-full h-full bg-gradient-to-t from-black via-black/60 to-transparent z-12"></div>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="relative w-full h-screen overflow-hidden">
+      <Image
+        src={banners[currentBanner]}
+        alt="Banner Rio Pardo Embalagens"
+        fill
+        priority
+        className="object-cover transition-all duration-700"
+      />
+
+      <div className="absolute inset-0 bg-black/40" />
+
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-6 text-center">
+        <h1 className="text-white text-4xl md:text-7xl font-black uppercase drop-shadow-lg">
+          Rio Pardo Embalagens
+        </h1>
+
+        <p className="text-white/90 text-lg md:text-2xl mt-4 max-w-2xl">
+          Soluções completas em embalagens, confeitaria,
+          descartáveis e artigos para festas.
+        </p>
+
+        <div className="flex flex-col md:flex-row gap-4 mt-8">
+          <Link
+            href="https://wa.me/5519998926166"
+            target="_blank"
+            className="bg-red-600 hover:bg-red-700 transition-all px-8 py-4 rounded-xl text-white font-bold uppercase"
+          >
+            Fazer orçamento
+          </Link>
+
+          <Link
+            href="#produtos"
+            className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all px-8 py-4 rounded-xl text-white font-bold uppercase"
+          >
+            Ver produtos
+          </Link>
+        </div>
       </div>
 
-      <div className="relative flex items-center justify-center flex-col z-13 p-3 w-full max-w-7xl mx-auto">
-        <div
-          data-aos="fade-up"
-          data-aos-delay="200"
-          className="text-center relative"
-        >
-          {}
-          <div className="relative min-w-full md:min-w-[600px]  flex flex-col items-center justify-center">
-            <h1 className="flex flex-col font-bold text-center leading-tight">
-              <span className="text-xl md:text-3xl text-zinc-300 tracking-[0.2em] uppercase mb-2">
-                DO VAREJO AO ATACADO
-              </span>
-
-              {}
-              <span className="text-4xl md:text-7xl font-black bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent drop-shadow-sm italic p-3">
-                SOLUÇÕES COMPLETAS
-              </span>
-            </h1>
-
-            {}
-            <a
-              href="https://wa.me/5519989926166"
-              target="_blank"
-              className="mt-8 text-lg md:text-2xl font-bold text-red-600 hover:text-red-500 border-b-2 border-red-600 hover:border-red-500 transition-all uppercase tracking-widest pb-1"
-            >
-              Fazer Orçamento
-            </a>
-          </div>
-        </div>
-
-        {}
-        {}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 hidden lg:block opacity-30 hover:opacity-100 transition-opacity duration-700">
-          {}
-        </div>
-
-        {}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 hidden lg:block opacity-30 hover:opacity-100 transition-opacity duration-700">
-          {}
-        </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+        {banners.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentBanner(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              currentBanner === index
+                ? "bg-white w-8"
+                : "bg-white/50"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
