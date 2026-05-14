@@ -35,6 +35,9 @@ export default function FAQ() {
       id="faq"
     >
       {/* GLOW FUNDO */}
+      
+      <div className="absolute bottom-0 right-0 w-[500px] h-[300px] bg-yellow-500/5 blur-[120px] rounded-full pointer-events-none" />
+      
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_60%)] pointer-events-none" />
 
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
