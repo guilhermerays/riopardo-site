@@ -31,7 +31,7 @@ export function Hero() {
         className="object-cover transition-all duration-700"
       />
 
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/10" />
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
         {banners.map((_, index) => (
