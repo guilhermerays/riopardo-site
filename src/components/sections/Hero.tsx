@@ -33,7 +33,7 @@ export function Hero() {
         alt="Banner Rio Pardo Embalagens"
         fill
         priority
-        className="object-cover transition-all duration-700 scale-[1.01]"
+        className="object-cover transition-all duration-1000 ease-out scale-[1.01]"
       />
 
       {/* OVERLAY SUAVE */}
