@@ -95,7 +95,7 @@ export function TheGroup() {
                 border border-white/5
                 bg-zinc-900/60
                 backdrop-blur-sm
-                transition-all duration-500
+                transition-all duration-700 ease-out
                 hover:border-white/10
                 hover:-translate-y-1
                 hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]
@@ -110,27 +110,27 @@ export function TheGroup() {
                   src={company.image}
                   alt={company.name}
                   fill
-                  className="object-cover opacity-70 transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover opacity-70 transition-transform duration-1000 ease-out group-hover:scale-105"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10 group-hover:from-black/75 transition-all duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10 group-hover:from-black/75 transition-all duration-700 ease-out" />
               </div>
 
               {/* CONTEÚDO */}
               <div className="relative z-10 h-full flex flex-col justify-between p-8">
 
                 {/* ÍCONE */}
-                <div className="w-14 h-14 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center shadow-[0_0_30px_rgba(0,0,0,0.25)] group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center shadow-[0_0_30px_rgba(0,0,0,0.25)] group-hover:scale-110 transition-transform duration-700 ease-out">
                   {company.icon}
                 </div>
 
                 {/* TEXTO */}
                 <div>
-                  <h3 className="text-2xl font-black text-white uppercase italic mb-3 leading-tight">
+                  <h3 className="text-2xl font-black text-white uppercase italic mb-3 leading-tight transition-all duration-700 ease-out group-hover:translate-x-1">
                     {company.name}
                   </h3>
 
-                  <p className="text-zinc-300 text-sm md:text-base leading-relaxed max-w-[90%]">
+                  <p className="text-zinc-300 text-sm md:text-base leading-relaxed max-w-[90%] transition-all duration-700 ease-out">
                     {company.description}
                   </p>
                 </div>
