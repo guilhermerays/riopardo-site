@@ -17,7 +17,7 @@ export function TheGroup() {
         "A maior variedade em artigos de festa, confeitaria e descartáveis da região.",
       icon: <FaStore className="w-7 h-7 text-yellow-400" />,
       cols: "md:col-span-2",
-      image: "/fachada.jpg",
+      image: "/fachada-embalagens.jpg",
     },
     {
       id: "distribuidora",
@@ -26,7 +26,7 @@ export function TheGroup() {
         "Atacado especializado para restaurantes, lanchonetes e comércios.",
       icon: <FaTruck className="w-7 h-7 text-red-500" />,
       cols: "md:col-span-1",
-      image: "/Distribuidora - Fachada.JPG",
+      image: "/fachada-distribuidora.jpg",
     },
     {
       id: "plasticos",
@@ -35,7 +35,7 @@ export function TheGroup() {
         "Fábrica própria de sacolas e sacos de lixo de alta resistência.",
       icon: <FaIndustry className="w-7 h-7 text-yellow-400" />,
       cols: "md:col-span-1",
-      image: "/fachada.jpg",
+      image: "/fachada-plasticos.jpg",
     },
     {
       id: "bobroll",
@@ -44,7 +44,7 @@ export function TheGroup() {
         "Indústria de bobinas picotadas para uso comercial e industrial.",
       icon: <FaScroll className="w-7 h-7 text-red-500" />,
       cols: "md:col-span-2",
-      image: "/fachada.jpg",
+      image: "/fachada-bobroll.jpg",
     },
   ];
 
@@ -110,6 +110,7 @@ export function TheGroup() {
                   src={company.image}
                   alt={company.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 66vw"
                   className="object-cover opacity-70 transition-transform duration-1000 ease-out group-hover:scale-105"
                 />
 
@@ -134,10 +135,12 @@ export function TheGroup() {
                     {company.description}
                   </p>
                 </div>
+
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
