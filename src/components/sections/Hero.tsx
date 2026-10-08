@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const banners = [
   "/banner-criancas.png",
+  "/banner-halloween.png",
   "/banner-festa.png",
   "/banner-confeitaria.png",
   "/banner-embalagens.png",
