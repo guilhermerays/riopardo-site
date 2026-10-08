@@ -22,35 +22,34 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-[70vh] overflow-hidden bg-zinc-950">
+    <section className="relative w-full aspect-[1000/469] overflow-hidden bg-zinc-950">
 
       {/* GLOW CINEMATOGRÁFICO */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04),transparent_60%)] pointer-events-none z-0" />
 
-      {/* IMAGEM */}
+      {/* IMAGEM DO BANNER */}
       <Image
         src={banners[currentBanner]}
         alt="Banner Rio Pardo Embalagens"
         fill
         priority
-        className="object-cover transition-all duration-1000 ease-out scale-[1.01]"
+        sizes="100vw"
+        className="object-contain w-full h-full transition-all duration-1000 ease-out"
       />
 
-      {/* OVERLAY SUAVE */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-black/10 z-10" />
-
-      {/* SOMBRA INFERIOR */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent z-20 pointer-events-none" />
+      {/* OVERLAY MUITO SUAVE */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent z-10 pointer-events-none" />
 
       {/* GLOW LATERAL */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-yellow-500/5 blur-[140px] rounded-full -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none" />
 
       {/* INDICADORES */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-30">
         {banners.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentBanner(index)}
+            aria-label={`Ir para o banner ${index + 1}`}
             className={`
               transition-all duration-700 ease-out rounded-full
               ${
