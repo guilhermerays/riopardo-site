@@ -15,7 +15,7 @@ export function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
