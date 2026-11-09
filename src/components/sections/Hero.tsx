@@ -4,8 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const banners = [
-  "/banner-halloween.png",
-  "/banner-locacao.png",
+    "/banner-locacao.png",
 ];
 
 export function Hero() {
